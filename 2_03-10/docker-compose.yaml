@@ -1,0 +1,9 @@
+services:
+  frontend:
+    image: grgonij/example-frontend
+    ports:
+      - 5001:5001
+  backend:
+    image: grgonij/example-backend
+    ports:
+      - 8080:8080
