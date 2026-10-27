@@ -7,3 +7,7 @@ services:
     image: grgonij/example-backend
     ports:
       - 8080:8080
+    environment:
+      - REDIS_HOST=redis
+  redis:
+    image: redis
