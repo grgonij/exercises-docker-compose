@@ -10,6 +10,7 @@ services:
     environment:
       - REDIS_HOST=redis
       - POSTGRES_HOST=db
+      - REQUEST_ORIGIN=http://localhost:8000
   redis:
     image: redis
   db:
@@ -25,3 +26,6 @@ services:
       - 8000:80
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - frontend
+      - backend
